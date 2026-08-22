@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KENZU - TỔNG HỢP MOD & TOOL FREE FIRE</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f5f7;
+            color: #222;
+            padding-bottom: 50px;
+        }
+
+        /* Top Notification Bar */
+        .top-notice {
+            background: linear-gradient(90deg, #ff0055, #ff5000);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(255, 0, 85, 0.3);
+        }
+
+        .top-notice a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 5px;
+        }
+
+        /* Header */
+        header {
+            background-color: #121218;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 0 15px 0;
+            border-bottom: 3px solid #ff0055;
+        }
+
+        header h1 {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+            margin-bottom: 15px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1c1c24;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 12px 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #c5c5d0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background-color: #ff0055;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        /* Notice Boxes */
+        .notice-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 1.5;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .notice-red {
+            background-color: #fff0f3;
+            color: #d90429;
+            border: 1px solid #ffccd5;
+        }
+
+        .notice-green {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+
+        .notice-box a.btn-yt {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 15px;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* Main Title */
+        .section-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 800;
+            color: #121218;
+            margin: 30px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        /* Mod Grid */
+        .mod-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* Card Style */
+        .mod-card {
+            background-color: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eef0f4;
+        }
+
+        .mod-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .mod-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #121218;
+        }
+
+        .mod-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .mod-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #1a1a24;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .mod-pass {
+            font-size: 13px;
+            color: #d90429;
+            background-color: #fff0f3;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        /* Download Buttons */
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .btn-dl {
+            flex: 1;
+            min-width: 100px;
+            padding: 9px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+            color: #ffffff;
+            transition: opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-dl:hover {
+            opacity: 0.9;
+        }
+
+        .btn-fft { background-color: #0077ff; }
+        .btn-ffm { background-color: #00b964; }
+        .btn-main { background-color: #ff0055; }
+        .btn-vip { background-color: #7209b7; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 26px; }
+            .mod-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Bar -->
+    <div class="top-notice">
+        📢 Kênh YouTube chính thức của KENZU — Nhấn <a href="https://www.youtube.com/@Kenzu-1317" target="_blank">ĐĂNG KÝ KÊNH</a> ủng hộ mình nhé!
+    </div>
+
+    <!-- Header & Menu -->
+    <header>
+        <h1>KENZU</h1>
+        <nav>
+            <a href="#"><i class="fa-solid fa-house"></i> Trang chủ</a>
+            <a href="#"><i class="fa-solid fa-book"></i> Hướng dẫn / Lưu ý</a>
+            <a href="https://www.youtube.com/@Kenzu-1317" target="_blank"><i class="fa-brands fa-youtube"></i> Youtube</a>
+            <a href="#"><i class="fa-solid fa-code"></i> Mod theo yêu cầu</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Announcement Boxes -->
+        <div class="notice-box notice-red">
+            📢 Kênh mới của mình ae ấn vào đây để đăng kí ủng hộ nhé!
+            <br>
+            <a href="https://www.youtube.com/@Kenzu-1317" target="_blank" class="btn-yt"><i class="fa-brands fa-youtube"></i> ĐĂNG KÝ KÊNH KENZU</a>
+        </div>
+
+        <div class="notice-box notice-green">
+            🛡️ Bản mod của mình được làm theo hướng an toàn, không can thiệp quá sâu vào file như 1 số bản mod khác nên không ban ID đâu nhé ae ❤️
+        </div>
+
+        <div class="section-title">
+            🔥 ĐÂY LÀ CÁC BẢN MOD TỔNG HỢP TỪ KÊNH MÌNH NHOA 🔥
+        </div>
+
+        <!-- Mod List Grid -->
+        <div class="mod-grid">
+
+            <!-- Item 1 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=AO+TVC+MUA+1" alt="Mod Skin">
+                <div class="mod-content">
+                    <div class="mod-title">👕 MOD SKIN ÁO TVC MÙA 1 VÀNG CHO ANDROID OB54</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.net/C2LWlEUy" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=HANH+DONG+M1887" alt="Mod Skin">
+                <div class="mod-content">
+                    <div class="mod-title">💥 MOD Hành động bắn nè thành hành động m1887 + nhất quyền</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.org/TqsmvK" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=SET+BIKER+TRANG" alt="Mod Skin">
+                <div class="mod-content">
+                    <div class="mod-title">👔 Mod Skin FF Set đồ áo biker trắng</div>
+                    <div class="btn-group">
+                        <a href="https://link4sub.com/IZS9qH9MsO" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                        <a href="https://link4sub.com/ZqiU1Va3fJ" target="_blank" class="btn-dl btn-ffm"><i class="fa-solid fa-download"></i> Tải FFM</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 (VIP) -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/7209b7/FFFFFF?text=APP+KEO+TAM+2026" alt="App Kéo Tâm">
+                <div class="mod-content">
+                    <div class="mod-title">🎯 APP KÉO TÂM FREE FIRE VIP 2026 - AUTO HEADSHOT FULL ĐỎ 100% - NHẸ TÂM - BÁM ĐẦU</div>
+                    <div class="mod-pass">🔑 Mật khẩu: 2026</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.org/hCgAyv7G" target="_blank" class="btn-dl btn-vip"><i class="fa-solid fa-fire"></i> Tải Về</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=BA+LO+CHIDORI" alt="Mod Ba Lô">
+                <div class="mod-content">
+                    <div class="mod-title">🎒 MOD BA LÔ VỢ IU THÀNH NẮM ĐẮM CHIDOR</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.org/lB9Hock" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                        <a href="https://link4m.net/OlhaEsg" target="_blank" class="btn-dl btn-ffm"><i class="fa-solid fa-download"></i> Tải FFM</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=MOD+SKIN+V128" alt="Mod Skin">
+                <div class="mod-content">
+                    <div class="mod-title">✨ MOD SKIN FREE FIRE V128 MỚI NHẤT OB54 PRO PLAYER FFTH ANDROID</div>
+                    <div class="btn-group">
+                        <a href="https://link4sub.com/hW6Rmzk2ha" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=KET+LIEU+SIEU+BA" alt="Hành Động Kết Liễu">
+                <div class="mod-content">
+                    <div class="mod-title">⚡ Mod hành động kết liễu siêu bá</div>
+                    <div class="btn-group">
+                        <a href="https://link4sub.com/EbTOejiJWo" target="_blank" class="btn-dl btn-fft"><i class="fa-solid fa-download"></i> Tải FFT</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=FAKE+LAG+FLUORITE" alt="Fake Lag">
+                <div class="mod-content">
+                    <div class="mod-title">📶 Fake lag Fluorite Ping No Key</div>
+                    <div class="btn-group">
+                        <a href="https://link4sub.com/askiOJRWIu" target="_blank" class="btn-dl btn-main"><i class="fa-solid fa-download"></i> Tải Về</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/121218/FFFFFF?text=MAT+NA+CO" alt="Mod Mặt Nạ">
+                <div class="mod-content">
+                    <div class="mod-title">🎭 MOD MẶT NẠ CỎ FFT ADR</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.org/OWqxNa" target="_blank" class="btn-dl btn-main"><i class="fa-solid fa-download"></i> Tải Về</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/ff0055/FFFFFF?text=IDOL+DAT+PLUS" alt="Idol Đạt Plus">
+                <div class="mod-content">
+                    <div class="mod-title">💎 LINK FILE Idol ĐẠT PLUS GIÁ 100K</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.net/Hxif0" target="_blank" class="btn-dl btn-main"><i class="fa-solid fa-download"></i> Tải File</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 11 (Mới thêm) -->
+            <div class="mod-card">
+                <img src="https://via.placeholder.com/600x350/ff5000/FFFFFF?text=MOD+HANH+DONG+BAN+NE" alt="Mod Hành Động Bắn Nè">
+                <div class="mod-content">
+                    <div class="mod-title">🔥 LINK MOD HÀNH ĐỘNG BẮN NỀ</div>
+                    <div class="btn-group">
+                        <a href="https://link4m.org/zOfok" target="_blank" class="btn-dl btn-main"><i class="fa-solid fa-download"></i> Tải Về</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
